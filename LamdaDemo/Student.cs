@@ -7,12 +7,13 @@ namespace LamdaDemo
         public string Name { get; set; }
         public int PhoneNumber { get; set; }
         public int Age { get; set; }
+        public int TotalMarks { get; set; }
         public string Address { get; set; }
 
 
         public override string ToString()
         {
-            return $"Id:{Id} Name:{Name} Age:{Age} Address:{Address} PhoneNumber:{PhoneNumber}";
+            return $"Id:{Id} Name:{Name} Age:{Age} Address:{Address} PhoneNumber:{PhoneNumber} TotalMarks:{TotalMarks}";
         }
     }
 }
