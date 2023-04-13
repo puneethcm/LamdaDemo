@@ -15,6 +15,24 @@ namespace LamdaDemo
             List<Student> sortedData = students.OrderBy(s => s.TotalMarks).ToList();
             Program.DisplayStudentDetais(sortedData);
         }
+
+		public static void DisplayStudentByAddress(List<Student> list)
+		{
+			Console.WriteLine("\nDisplay students based on address");
+			var reslut = list.GroupBy(s => s.Address);
+			foreach(var r in reslut)
+			{
+				Console.WriteLine("Key:" + r.Key);
+				Console.WriteLine("=====================");
+				List<Student> students = r.ToList();
+				foreach(Student s in students)
+				{
+					Console.WriteLine(s);
+				}
+				Console.WriteLine();
+			}
+
+		}
 	}
 }
 
