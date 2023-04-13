@@ -15,12 +15,13 @@ internal class Program
             new Student(){Id=5,Name="Kavya",PhoneNumber=2875212,Age=17,Address="Banglore",TotalMarks=95}
         };
         DisplayStudentDetais(list);
-        Console.WriteLine("\nStudents Age between 12 & 18");
-        StudentDataManagement.RetriveDataFromListByAge(list);
-        StudentDataManagement.SortDataBasedOnMarks(list);
-        StudentDataManagement.DisplayStudentByAddress(list);
-        StudentDataManagement.DisplayFirst3Students(list);
-        StudentDataManagement.DisplayLast3Students(list);
+        //Console.WriteLine("\nStudents Age between 12 & 18");
+        //StudentDataManagement.RetriveDataFromListByAge(list);
+        //StudentDataManagement.SortDataBasedOnMarks(list);
+        //StudentDataManagement.DisplayStudentByAddress(list);
+        //StudentDataManagement.DisplayFirst3Students(list);
+        //StudentDataManagement.DisplayLast3Students(list);
+        StudentDataManagement.SearchStudentByName(list);
 
         Console.ReadLine();
     }

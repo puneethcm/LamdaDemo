@@ -48,6 +48,23 @@ namespace LamdaDemo
 			top3.Reverse();
             Program.DisplayStudentDetais(top3);
         }
+
+        public static void SearchStudentByName(List<Student> list)
+        {
+            Console.WriteLine("\nSearch student by Name");
+			Console.WriteLine("\nEnter student name");
+			string studentName = Console.ReadLine();
+			var name = list.GroupBy(s => s.Name).ToList();
+            foreach(var stu in name)
+			{
+                var s = stu.Key.Equals(studentName);
+                if (s == true)
+                {
+                    Console.WriteLine(stu.Key + " Is present");
+                }
+            }
+			Console.WriteLine("Student with name {0} is not present", studentName);
+        }
     }
 }
 
