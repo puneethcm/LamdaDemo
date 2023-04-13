@@ -33,6 +33,21 @@ namespace LamdaDemo
 			}
 
 		}
-	}
+
+		public static void DisplayFirst3Students(List<Student> list)
+		{
+			Console.WriteLine("\nDisplay First 3 students");
+			var top3 = list.Take(3).ToList();
+            Program.DisplayStudentDetais(top3);
+        }
+
+        public static void DisplayLast3Students(List<Student> list)
+        {
+            Console.WriteLine("\nDisplay Last 3 students");
+            var top3 = list.TakeLast(3).ToList();
+			top3.Reverse();
+            Program.DisplayStudentDetais(top3);
+        }
+    }
 }
 
